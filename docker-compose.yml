@@ -1,0 +1,15 @@
+services:
+  jmeter:
+    image: nsaini410/jmeter-tests:latest
+    environment:
+      - RESULTS_DIR=${RESULTS_DIR}
+      - TEST_PLAN_PATH=${TEST_PLAN_PATH}
+      - OUTPUT_FILE=${OUTPUT_FILE}
+    volumes:
+      - "${RESULTS_DIR}:/tests/results"
+    command: [
+      "-n",
+      "-t", "${TEST_PLAN_PATH}",
+      "-l", "${OUTPUT_FILE}",
+      "-Jjmeter.save.saveservice.output_format=csv"
+    ]

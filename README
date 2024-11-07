@@ -1,0 +1,21 @@
+Para el proyecto solicitado primero se tomo en cuenta la documentacion brindada sobre los servicios: https://echo-serv.tbxnet.com/explorer/#/.
+
+Se documentaron los casos de prueba en el archivo "Casos de Prueba - Toolbox Api.xlsx" dentro de la carpeta "test_cases".
+
+En la aplicacion de JMeter instalada de forma local se configuró el test plan en el archivo "toolbox_testPlan".
+
+Una vez creados los casos de pruebas solicitados, se configuró Docker.
+
+Se tomó una imagen de la aplicación desde Docker, se configuró el contenedor y se creó un repositorio en Docker Hub. "nsaini40/jmeter-tests".
+
+Se configuró primero el Dockerfile y luego se creo un docker-compose para agregar variables de entorno y simplificar la ejecucion del contenedor.
+
+Las variables de entorno en este caso se hicieron para simplificar el guardado del archivo con los resultados de las pruebas.
+
+Para correr las pruebas es necesario tener instalado Docker. Solo es necesario contar con el archivo "docker-compose.yml" y el ".env" dentro del directorio
+donde se ejecutaran las pruebas. Dejo todo disponible en el repositorio de git.
+
+1. Clonar repositorio git: 
+2. Abrir una terminal en la carpeta raiz del proyecto y ejecutar el siguiente comando: "docker-compose up".
+3. Se ejecutarán las pruebas y se creará una carpeta "results" y dentro se guardara el archivo .csv con los resultados.
+4. En caso que falle un assert se especificará dentro del archivo mencionado anteriormente.
