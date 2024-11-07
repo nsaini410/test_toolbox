@@ -12,10 +12,13 @@ Se configuró primero el Dockerfile y luego se creo un docker-compose para agreg
 
 Las variables de entorno en este caso se hicieron para simplificar el guardado del archivo con los resultados de las pruebas.
 
-Para correr las pruebas es necesario tener instalado Docker. Solo es necesario contar con el archivo "docker-compose.yml" y el ".env" dentro del directorio
+Para correr las pruebas es necesario tener instalado Docker. 
+
+Solo es necesario contar con el archivo "docker-compose.yml" y el ".env" dentro del directorio
 donde se ejecutaran las pruebas. Dejo todo disponible en el repositorio de git.
 
-1. Clonar repositorio git: 
-2. Abrir una terminal en la carpeta raiz del proyecto y ejecutar el siguiente comando: "docker-compose up".
-3. Se ejecutarán las pruebas y se creará una carpeta "results" y dentro se guardara el archivo .csv con los resultados.
-4. En caso que falle un assert se especificará dentro del archivo mencionado anteriormente.
+1. Clonar repositorio git: https://github.com/nsaini410/test_toolbox.git.
+2. Abrir una terminal en la carpeta raiz del proyecto y ejecutar el siguiente comando: "docker pull nsaini410/jmeter-tests:latest".
+3. Luego para ejecutar las pruebas: "docker-compose up".
+4. Se ejecutarán las pruebas y se creará una carpeta "results" y dentro se guardara el archivo .csv con los resultados.
+5. En caso que falle un assert se especificará dentro del archivo mencionado anteriormente.
